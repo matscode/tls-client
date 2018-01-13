@@ -1,0 +1,173 @@
+/*
+    Created on : 2017-10-24
+    Author     : Michael Akanji
+*/
+/*Dependencies*/
+@import 'padding';
+@import 'margin';
+@import 'variables';
+@import 'mixins';
+@import 'utilities';
+
+/*Top Level*/
+body {
+  //margin: 0px;
+}
+
+#root {
+  
+  .tlscontainer {
+    
+    max-width: 400px;
+    //text-align: left;
+    @extend .center-block
+  }
+  
+  .big-tlscontainer {
+    
+    max-width: 650px;
+    //text-align: left;
+    @extend .center-block
+  }
+  
+  .panel {
+    color: #333;
+  }
+  
+  .SignIn, .SignUp {
+    
+    div.panel {
+      text-align: left;
+      
+      padding: {
+        top: 50px;
+        bottom: 40px;
+        
+        left: 30px;
+        right: 30px;
+      }
+      
+    }
+    
+  }
+  
+  .Dashboard {
+    
+    div.panel {
+      text-align: left;
+      
+      padding: {
+        top: 30px;
+        bottom: 40px;
+        
+        left: 20px;
+        right: 20px;
+      }
+      
+      .status {
+        text-align: center;
+        font-size: 1.3em;
+      }
+      
+      .assets {
+        
+        ul {
+          padding: {
+            top: 10px;
+          }
+          
+          li {
+            display: inline-block;
+            text-transform: uppercase;
+            
+            font-size: 0.9em;
+            background: {
+              color: #fff;
+            }
+            
+            border: {
+              style: solid;
+              color: #ccc;
+              width: 2px;
+            }
+            
+            //width: 80px;
+            height: 50px;
+            
+            text-align: center;
+            vertical-align: middle;
+            
+            margin: {
+              right: 10px;
+              bottom: 10px;
+            }
+            
+            padding: {
+              top: 15px;
+              
+              right: 10px;
+              left: 10px;
+            }
+            
+            &.active {
+              
+              border: {
+                style: none;
+                width: 0px;
+              }
+              
+              background-color: #444;
+              color: #fff;
+              font-weight: bold;
+            }
+            
+          }
+        }
+      }
+      
+      .expiry-action {
+        
+        .expiry, .action {
+          display: inline-block;
+          text-align: center;
+          width: 50%;
+          
+          margin: {
+            top: 10px;
+            bottom: 10px;
+          }
+          @extend .text-bold;
+          
+          font-size: 1.5em;
+        }
+        
+      }
+      
+    }
+    
+  }
+  
+  .put, .call {
+    text-transform: uppercase;
+    
+    border: {
+      style: solid;
+      width: 1px;
+    }
+    
+    padding: 10px;
+    
+    line-height: 1.1;
+  }
+  
+  .put {
+    color: $put-color;
+    border-color: $put-color;
+  }
+  
+  .call {
+    color: $call-color;
+    border-color: $call-color;
+  }
+  
+}
